@@ -3,7 +3,7 @@
 
 ---
 Language: Cpp
-Standard: c++20
+Standard: c++23
 
 BasedOnStyle: Google
 IndentWidth: 4
@@ -20,7 +20,7 @@ BinPackParameters: false
 AllowAllArgumentsOnNextLine: false
 AllowAllParametersOfDeclarationOnNextLine: false
 
-# Initializers & C++20
+# Initializers & C++23
 Cpp11BracedListStyle: true
 SpaceBeforeCpp11BracedList: false
 
