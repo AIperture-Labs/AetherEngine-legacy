@@ -9,6 +9,7 @@ nothing fits, ask instead of adding a top-level directory.
 | `configs/` | Tooling and runtime configuration (`submodules.toml`, `dev/`, `runtimes/`) |
 | `extern/` | Third-party dependencies, as git submodules of the AIperture-Labs forks |
 | `VERSIONS.md` | Versions of the languages, tools and dependencies in use |
+| `python/` | Python scripting and tooling: the `aether` package, bridges to external tools, plugins (uv project) |
 | `scripts/just/` | `just` recipes, imported by the root `justfile` |
 | `sources/` | Engine modules, one directory per module |
 | `tests/` | Unit tests, one directory per module under test (doctest) |

@@ -9,7 +9,7 @@ update this page in the same change as the version it lists.
 | --- | --- | --- |
 | C++ | 23 | `cmake/Config.cmake` (`CMAKE_CXX_STANDARD`) |
 | CMake | 3.31 – 4.1 | `CMakeLists.txt` (`cmake_minimum_required`) |
-| Python | 3.14 | `cmake/Config.cmake` (`AETHER_ENGINE_PYTHON_VERSION`) |
+| Python | 3.14 (build scripts and engine scripting) | `cmake/Config.cmake` (`AETHER_ENGINE_PYTHON_VERSION`) |
 | Lua | 5.4 (planned, game scripting) | `.agents/instructions/style/lua.md` |
 
 ## Build and tooling

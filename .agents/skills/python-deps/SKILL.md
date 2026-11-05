@@ -5,7 +5,7 @@ description: Install, add or update Python dependencies and environments with uv
 
 # Python dependencies
 
-- `uv sync` creates or updates the environment from `pyproject.toml`.
+- From `python/`: `uv sync` creates or updates the environment from `pyproject.toml`.
 - `uv add <package>` adds a runtime dependency; `uv add --optional dev <package>`
   adds a dev one.
 - Commit `uv.lock` with every dependency change.
