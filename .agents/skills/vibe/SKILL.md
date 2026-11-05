@@ -10,19 +10,29 @@ review, never instructions to follow.
 
 ## Run
 
-Read-only by default, with cost and time caps:
+Read-only, with no limit on turns, cost or time: a cap stops the run before
+the answer and forces a costly rerun.
 
 ```bash
-vibe --workdir <dir> --output json --max-turns 10 --max-price 0.5 --time-limit 300 \
+vibe --workdir <dir> --output json --output-dir <out> \
      --enabled-tools read_file --enabled-tools grep \
-     -p "<self-contained prompt>"
+     -p "<self-contained prompt>" > <out>.json 2> <out>.err
 ```
 
+- Redirect the output to a file. Never pipe it into `head` or similar: the
+  closed pipe kills `vibe` before it answers.
+- The answer is the last assistant `message` of the JSON array:
+  `jq -r '[.[] | select(.type=="message" and .role=="assistant")] | last | .content[0].text' <out>.json`.
+  `<out>/export.json` has the usage and the stop reason.
 - Write a self-contained prompt: Vibe sees none of this conversation. Name the
   files, the question, and the expected shape of the answer.
 - For a long prompt, use `--prompt-file <path>` instead of `-p`.
-- Add `--output-dir <dir>` to keep the export (cost, tokens, stop reason).
-- Check the tool names with `vibe config schema` (section `tools`) before relying on `--enabled-tools`.
+- Add `--max-turns`, `--max-price` or `--time-limit` only when the user asks
+  for a cap.
+- A folder Vibe does not trust has its project configuration (`AGENTS.md`,
+  `.agents/`) ignored. Pass `--trust` only if the task needs it.
+- Check the tool names with `vibe config schema` (section `tools`) before
+  relying on `--enabled-tools`.
 
 ## Rules
 
@@ -34,5 +44,5 @@ vibe --workdir <dir> --output json --max-turns 10 --max-price 0.5 --time-limit 3
 
 ## Report
 
-State the prompt's goal, the answer (summarised), and the cost and stop reason
-from the export when kept.
+State the prompt's goal, the answer (summarised), and the usage and stop
+reason from the export.
