@@ -1,0 +1,4 @@
+# Copyright (c) 2026 AIperture-Labs <xavier.beheydt@gmail.com>
+# Doc: https://git-scm.com/docs/gitattributes
+
+* text=auto eol=lf
