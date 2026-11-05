@@ -1,5 +1,5 @@
 ---
-name: format
+name: cpp-format
 description: Format C and C++ sources with the repository's clang-format configuration. Use after editing C/C++ files, before committing, or when asked to format code or fix formatting.
 ---
 

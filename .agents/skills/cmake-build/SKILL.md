@@ -1,5 +1,5 @@
 ---
-name: build
+name: cmake-build
 description: Build AetherEngine, or a single target, from a configured CMake preset. Use when asked to build, compile or rebuild, or to check that a change compiles.
 ---
 
@@ -8,7 +8,7 @@ description: Build AetherEngine, or a single target, from a configured CMake pre
 ## 1. Make sure the preset is configured
 
 The binary directory `out/build/<preset>/` must contain a `CMakeCache.txt`. If it does not, run the
-`configure` skill first with the same preset.
+`cmake-configure` skill first with the same preset.
 
 ## 2. Build
 

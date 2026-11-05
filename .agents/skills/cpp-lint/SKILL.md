@@ -1,5 +1,5 @@
 ---
-name: lint
+name: cpp-lint
 description: Run clang-tidy static analysis on C and C++ sources using the project's compile database. Use when asked to lint, run static analysis, or check C++ code quality before a commit or review.
 ---
 
@@ -11,7 +11,7 @@ Checks are configured in `.clang-tidy` at the repository root: `modernize-*` and
 ## 1. Have a compile database
 
 clang-tidy needs `compile_commands.json`, which every preset exports into its binary directory. If
-`out/build/<preset>/compile_commands.json` is missing, run the `configure` skill first.
+`out/build/<preset>/compile_commands.json` is missing, run the `cmake-configure` skill first.
 
 ## 2. Run
 
