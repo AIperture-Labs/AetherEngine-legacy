@@ -1,5 +1,5 @@
 ---
-name: configure
+name: cmake-configure
 description: Configure the AetherEngine CMake build through a preset. Use when asked to configure, reconfigure or regenerate the build, before a first build, or after changing CMakeLists.txt, files under cmake/, or build options.
 ---
 
