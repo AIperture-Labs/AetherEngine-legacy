@@ -1,5 +1,5 @@
 ---
-name: test
+name: cpp-test
 description: Build and run the AetherEngine unit tests (doctest + CTest), or add new tests. Use when asked to run, write or fix tests, or to verify a change with tests.
 ---
 
@@ -16,7 +16,7 @@ cmake --preset <preset> -DBUILD_TESTS=ON
 cmake --build --preset <preset>-verbose
 ```
 
-See the `configure` and `build` skills for choosing the preset and handling failures.
+See the `cmake-configure` and `cmake-build` skills for choosing the preset and handling failures.
 
 ## 2. Run
 

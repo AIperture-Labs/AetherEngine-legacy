@@ -27,7 +27,7 @@ function(add_doctest)
     )
 
     target_compile_features(${DOCTEST_NAME}
-        PRIVATE cxx_std_20
+        PRIVATE cxx_std_23
     )
 
     target_link_libraries(${DOCTEST_NAME}
